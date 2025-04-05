@@ -1,6 +1,6 @@
 # Spec: Secret References v0.0.1
 
-WIP: Brief description
+A set of rules for safely and securely keep track of secrets referenced in Uqido repositories through the BitWarden Password and Secret Manager.
 
 ## Dependencies
 
