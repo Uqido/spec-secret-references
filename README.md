@@ -18,10 +18,10 @@ This specification defines the standardized syntax and semantics for managing se
 
 ## Normative Content
 
-This specification applies only to secrets used during the *development process* of the software components hosted in the repository.  
+This specification applies only to secrets used during the *development process* of the software components hosted in the repository.<br>
 Developers **should** not store secrets related to end users or test users in repositories.
 
-All explicit references to secrets **shall** be stored as BitWarden URLs.  
+All explicit references to secrets **shall** be stored as BitWarden URLs.<br>
 This URL **shall** point directly to the given secret item containing the secret it refers to.
 
 Developers **should** not describe what a secret URL points to. Instead, the URL should be placed exactly where the plain secret value would normally appear:
@@ -39,7 +39,7 @@ In order to access this service, you should login with the user 'test-user'
 you can find the password at https://vault.bitwarden.com/#/vault?organizationId=...
 ```
 
-When a secret is part of a machine-readable file—such as a .env file, a Docker Compose file, etc.—the file **should** not contain the secret URL directly, unless it is explicitly legit to do so.  
+When a secret is part of a machine-readable file—such as a .env file, a Docker Compose file, etc.—the file **should** not contain the secret URL directly, unless it is explicitly legit to do so.<br>
 Instead, a versioned copy of the file **should** be created with a recognizable postfix.
 The local file **shall** be added to .gitignore and **will** contain the local, unsecured secret values:
 
@@ -57,4 +57,4 @@ SERVICE_SECRET=some_credential
 SERVICE_SECRET=https://vault.bitwarden.com/#/vault?organizationId=...
 ```
 
-Missing secrets **should** be signaled by sensible errors whenever requested by the repository tool chain.  
+Missing secrets **should** be signaled by sensible errors whenever requested by the repository tool chain.
