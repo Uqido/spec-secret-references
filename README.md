@@ -35,11 +35,13 @@ password: https://vault.bitwarden.com/#/vault?organizationId=...
 
 *NOT OK*:
 ```
-In order to access this service, you should login with the user 'test-user', you can find the password at https://vault.bitwarden.com/#/vault?organizationId=...
+In order to access this service, you should login with the user 'test-user'
+you can find the password at https://vault.bitwarden.com/#/vault?organizationId=...
 ```
 
-When a secret is part of a machine-readable file—such as a .env file, a Docker Compose file, etc.—the file **should** not contain the secret URL directly, unless it is explicitly legit to do so.
-Instead, a versioned copy of the file **should** be created with a recognizable postfix. The local file should be added to .gitignore and **will** contain the local, unsecured secret values:
+When a secret is part of a machine-readable file—such as a .env file, a Docker Compose file, etc.—the file **should** not contain the secret URL directly, unless it is explicitly legit to do so.  
+Instead, a versioned copy of the file **should** be created with a recognizable postfix.
+The local file **shall** be added to .gitignore and **will** contain the local, unsecured secret values:
 
 *OK*:
 ```
