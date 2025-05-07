@@ -4,7 +4,7 @@ A set of rules for safely and securely keep track of secrets referenced in Uqido
 
 ## Dependencies
 
-- https://github.com/Uqido/spec-specification-repository/tree/0.0.1
+- https://github.com/Uqido/spec-specification-repository/tree/v0.0.1
 
 ## Adoption Impact
 
